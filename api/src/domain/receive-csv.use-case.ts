@@ -19,8 +19,10 @@ export class ReceiveCsvUseCase {
             cols,
         );
 
-        console.log('\n')
-        console.log('Handling ReceiveCsvUseCase'.green.bold)
-        console.log(fileData)
+        // console.log('\n')
+        // console.log('Handling ReceiveCsvUseCase'.green.bold)
+        // console.log(fileData)
+
+        await this.csvProcessor.handle(fileData);
     }
 }
