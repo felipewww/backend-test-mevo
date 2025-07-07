@@ -1,8 +1,4 @@
-export type CSVRow = {
-    from: string;
-    to: string;
-    amount: number;
-}
+import {CSVRow} from "@/domain/csv-reader.use-case";
 
 export class CsvProcessorUseCase {
     constructor(

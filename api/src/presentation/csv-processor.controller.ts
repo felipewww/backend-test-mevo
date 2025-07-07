@@ -9,6 +9,11 @@ export class CSVProcessorController {
     }
 
     async putCsv() {
-        return this.receiveCsv.handle('teste')
+        const multerFilename = 'uploads/data.csv'
+
+        return this.receiveCsv.handle(
+            multerFilename,
+            ['from','to','amount']
+        )
     }
 }

@@ -12,8 +12,15 @@ export class ReceiveCsvUseCase {
 
     async handle(
         filename: string,
+        cols: string[],
     ) {
+        const fileData = await this.csvReader.handle(
+            filename,
+            cols,
+        );
+
         console.log('\n')
         console.log('Handling ReceiveCsvUseCase'.green.bold)
+        console.log(fileData)
     }
 }
